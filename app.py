@@ -13,7 +13,7 @@ except Exception:
     st.error("API Key አልተገኘም! እባክዎ Streamlit Secrets ላይ ያስገቡ።")
     st.stop()
 
-model = genai.GenerativeModel('gemini-1.5-flash')
+model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
 # 2. ዲዛይን
 st.title("🎙️ እንግሊዝኛን በ AI ይለማመዱ")
@@ -69,4 +69,5 @@ if audio_value:
             st.info(result['feedback'])
             
         except Exception as e:
+
             st.error(f"Error: {e}")
